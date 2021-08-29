@@ -1,0 +1,91 @@
+<!--
+  KeyShotXR
+  (c) Copyright 2012-2017 Luxion ApS - All Rights Reserved.
+
+  Instructions for deploying KeyShotXR to a website and sharing via email.
+-->
+
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>KeyShotXR instructions</title>
+    <style>
+
+      *, html, body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        color: #666666;
+      }
+
+      .code {
+        display: inline-block;
+        padding: 5px;
+        border: 1px solid #ccc;
+        color: #B0B0B0;
+        background-color: #173C47;
+        border-radius: 3px;
+      }
+
+      .overlay {
+        position: absolute;
+        display: inline-block;
+        width: 800px; /* same width as iframe below */
+        height: 1425px; /* same height as iframe below */
+        pointer-events: none;
+      }
+
+      .c-tag {
+        color: #B38D36;
+      }
+
+      .c-attribute {
+        color: #48B093;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>集成浴柜热水器 D4021</h2>
+    <div style="max-width: 800px; max-height: 1425px;">
+      <div class="overlay" id="overlay">&nbsp;</div>
+      <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 178.125%; overflow: hidden;">
+        <iframe src="DLM4021sf.html"
+                allowfullscreen
+                style="position: absolute; top: 0px; left: 0px; height: 100%; width: 1px; min-width: 100%; *width: 100%;"
+                frameborder="0"
+                scrolling="no">
+        </iframe>
+      </div>
+    </div>
+    
+    <p style="line-height:36px">
+    	1、藏式热水器+浴柜的智能一体设计，高端时尚。<br>
+        2、器不用挂墙安装，没有传统的掉落危险，安全可靠。<br>
+        3、线全隐藏,更美观大方。<br>
+        4、台供全屋热水。<br>
+        5、60°安全防护智能系统。<br>
+        6、速智能加热系统，热水24小时随你用。<br>
+        7、采用304不锈钢材质，面精镀着色处理,经久耐用，不退色、不发霉、环保无甲醛、不滋生细菌，高品质和时尚高贵的同时体现。<br>
+        8、脑触控超大显示屏，智能控制系统。<br>
+        9、采用岩板材质，高贵，环保，耐磨，耐高温，易清洁。
+    </p>
+   <script>
+   // In cases where the mouse is in a drag state and dragged
+   // outside of the iframe the event is still activated
+   // when focusing back into the iframe. This will block the event until
+   // the mouse activates the event.
+   var blockEvent = true;
+   if (blockEvent) {
+     var overlay = document.getElementById("overlay");
+
+     document.addEventListener("mousedown", function(e) {
+       overlay.style.pointerEvents = "none";
+     }, false);
+
+     document.addEventListener("mouseup", function(e) {
+       overlay.style.pointerEvents = "auto";
+     }, false);
+   }
+   </script>
+  </body>
+</html>
